@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../../plugin/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../plugin/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../css/site.css" rel="stylesheet" />
+    <link href="../../css/login.css" rel="stylesheet" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .login_box {border-top: 3px solid #286AAB;}
+        .categroy_content_list {min-height:300px;}
+        .categroy_content_list li {float: left;width: 50%;font-size: 12px;}
+        .categroy_content_list li label input {margin-right: 5px;}
+        .filter_select {width: 100%;}
+        .filter_select_title { border-bottom: 1px solid #ccc;height: 28px;line-height: 28px;}
+        .filter_select_title .select_num {float: right;border-top: 2px solid #ccc;border-left: 2px solid #ccc;padding: 0 10px;height: 28px;background: #fff;}
+        .bckeys {display: inline-block;padding: 6px 10px;border: 1px solid #ddd;margin-right: 5px;color: #808080;font-size: 13px;cursor: default;margin: 5px;font-weight: bold;}
+        </style>
+</head>
+<body class="login_body">
+    <!-- start login content-->
+    <div class="login_box_content">
+        <div class="container margin_auto padding_10_0">
+            <div class="row marginT_40">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="login_box max_width_350 margin_auto">
+                        <div class="marginT_20 color999 clearfix">
+                            <div class="categroy_content_list">
+                                <ul>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" id="industry55" value="55" name="industry">吃饭
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" id="industry56" value="56" name="industry">KTV
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" id="Checkbox1" value="55" name="industry">麻将
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" id="Checkbox2" value="56" name="industry">漂流
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" id="Checkbox3" value="55" name="industry">烧烤
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" id="Checkbox4" value="56" name="industry">喝水
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" id="Checkbox5" value="55" name="industry">饮料
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" id="Checkbox6" value="56" name="industry">啤酒
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="filter_select">
+		        			<div class="filter_select_title clearfix">
+		        				<div class="select_num colorblue fontweiblod">
+		        					(<span class="count">0</span>) 过滤器选择
+		        				</div>
+		        			</div>
+                                <div class="filter_select_box">
+                                    
+                                </div>
+			                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end login content-->
+    <script src="../../js/jquery/jquery-1.10.2.js"></script>
+        <script>
+        function close_select(obj) {
+            var _index = $(obj).prev(".name").attr("id");
+            $(".categroy_content_list li label[_index=" + _index + "]").find("input").prop("checked",false);
+            $(obj).parents(".bckeys").remove();
+
+        }
+        function input_checked() {
+            $(".categroy_content_list li label").change(function () {
+                var _checked = $(this).find("input").prop("checked");
+                var _text = $(this).text();
+                var i = $(this).parent().index();
+                $(this).attr("_index", "span"+i);
+                var _span = '<span class="bckeys">' +
+                                          '<span class="name" id="span' + i + '">' + _text + '</span>' +
+                                          '<i class="fa fa-remove fa-fw close_select" onclick="close_select(this);"></i>' +
+                                      '</span>';
+                if (_checked == true) {
+                    $(".filter_select_box").append(_span);
+                } else {
+                    $("#span" + i).parent(".bckeys").remove();
+                }
+            });
+        }
+       
+        $(function () {
+            input_checked();
+        });
+       
+    </script>
+</body>
+</html>

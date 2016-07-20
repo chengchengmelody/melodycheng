@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../../plugin/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../plugin/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../css/site.css" rel="stylesheet" />
+    <link href="../../css/login.css" rel="stylesheet" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="login_body">  
+     <!--start login head-->   
+    <div class="clearfix selfacolor">
+        <a href="#" class="back_home font_13 color666 pull-right">
+             		<i class="fa fa-home fa-fw"></i> Back to Home
+             	</a>
+    </div>   
+    <!--  end login head-->
+    <!-- start login content-->
+    <div class="login_box_content">
+   		<div class="container margin_auto padding_10_0">
+   			<div class="row marginT_40">
+   				<div class="col-md-4 col-md-offset-4">
+   					<div class="login_box max_width_350 margin_auto">
+   						<div class="clearfix center marginD_40">
+                               <img src="../../images/login/login_logo.png"/> 
+   						</div>
+	   					<div class="marginT_20 color999 clearfix">
+	   						<div class="form-group has-feedback">							  
+							  <div class="input-group position_relative">
+							    <span class="input-group-addon">
+							    	<i class="fa fa-user fa-fw color999"></i>
+							    </span>
+							    <input type="text" class="form-control">
+							  </div>
+							</div>
+							<div class="form-group has-feedback">							  
+							  <div class="input-group position_relative">
+							    <span class="input-group-addon">
+							    	<i class="fa fa-lock fa-fw color999"></i>
+							    </span>
+							    <input type="text" class="form-control">
+							  </div>
+							</div>
+							<div class=" marginT_20">							
+							<div class="btn background89BA17 fontsize16 colorfff block position_relative" onclick="f_Login();">Sign In</div>
+							<div class="error_info">
+								<span id="status" class="errors">The credentials you provided cannot be determined to be authentic.</span>
+							</div>
+							</div>
+								<div class="clearfix center selfacolor margin_top30 marginD_20">
+   							
+							    <a href="javascript:void(0);">Sign up for a new account</a>
+   						    </div>
+								<div class="marginT_10 center forget_btn">
+								<span class="marginR_15">
+								  <a href="javascript:void(0);" class="color999 fontsize12"><i class="fa fa-envelope fa-fw"></i> Account Activation</a>
+								</span>|
+								<span class="marginL_15">
+									<a href="javascript:void(0);" class="color999 fontsize12"><i class="fa fa-key fa-fw"></i> Forgot Password ?</a>
+								</span>
+							</div>
+	   					</div>
+   					</div>
+                       <div class="backgroundfff6d2 colororg marginT_10 padding_L10 lineheight30 fontsize12 center" style="border-radius:3px;">
+   							<i class="fa fa-exclamation-circle fa-fw colorffcc01"></i> &nbsp;Do not keep signed in when login at public places.
+	   					</div>
+   				</div>
+   				
+   			</div>
+   		</div>
+    </div>
+    <!-- end login content-->
+    <!--start footer-->
+    <div class="login_footer">
+    	<div class="text-center marginT_20 color999">
+    		Smart-Plant.net &copy; Copyright 2015 All rights reserved
+    	</div>
+    </div>
+    <!--end footer-->   
+</body>
+</html>

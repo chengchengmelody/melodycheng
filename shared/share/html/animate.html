@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>trasition</title>
+    <style>
+        * {margin: 0;padding: 0;font-family:'Helvetica neue', Helvetica, Arial, sans-serif;box-sizing: border-box;}
+        body{background:#f7f8f9!important;}
+        section {border: 1px solid #ccc;width: 200px;margin: 30px auto;}
+        div {width:200px;height:200px;text-align:center;margin:0 auto;padding-top:100px;background:#286AAB;color:#fff;}
+      
+        @-moz-keyframes myfirst /* Firefox */
+                {
+                0%   {background: red; left:0px; top:0px;}
+                25%  {background: yellow; left:200px; top:0px;}
+                50%  {background: blue; left:200px; top:200px;}
+                75%  {background: green; left:0px; top:200px;}
+                100% {background: red; left:0px; top:0px;}
+                }
+
+        @-webkit-keyframes myfirst /* Safari ºÍ Chrome */
+                {
+                0%   {background: red; left:0px; top:0px;}
+                25%  {background: yellow; left:200px; top:0px;}
+                50%  {background: blue; left:200px; top:200px;}
+                75%  {background: green; left:0px; top:200px;}
+                100% {background: red; left:0px; top:0px;}
+                }
+
+        @-o-keyframes myfirst /* Opera */
+                {
+                0%   {background: red; left:0px; top:0px;}
+                25%  {background: yellow; left:200px; top:0px;}
+                50%  {background: blue; left:200px; top:200px;}
+                75%  {background: green; left:0px; top:200px;}
+                100% {background: red; left:0px; top:0px;}
+                }
+          @keyframes myfirst
+                {
+                0%   {background: red; left:0px; top:0px;}
+                25%  {background: yellow; left:200px; top:0px;}
+                50%  {background: blue; left:200px; top:200px;}
+                75%  {background: green; left:0px; top:200px;}
+                100% {background: red; left:0px; top:0px;}
+                }
+           div.aaaaaaa
+                {
+                position:relative;
+                -moz-animation: myfirst 5s linear 2s infinite alternate;
+                -webkit-animation: myfirst 5s linear 2s infinite alternate;
+                -o-animation: myfirst 5s linear 2s infinite alternate;
+                animation: myfirst 5s linear 2s infinite alternate;
+                }
+        @-moz-keyframes aaaa /* Firefox */
+                {
+	            0%,100%{transform:rotate(0);}
+	            10%,30%{transform:rotate(3deg);}
+	            20%,40%,60%,80%{transform:rotate(-3deg);}
+	            50%,70%{ transform:rotate(3deg);}
+                }
+
+        @-webkit-keyframes aaaa /* Safari ºÍ Chrome */
+                {
+	            0%,100%{transform:rotate(0);}
+	            10%,30%{transform:rotate(3deg);}
+	            20%,40%,60%,80%{transform:rotate(-3deg);}
+	            50%,70%{ transform:rotate(3deg);}
+                }
+
+        @-o-keyframes aaaa /* Opera */
+                {
+	            0%,100%{transform:rotate(0);}
+	            10%,30%{transform:rotate(3deg);}
+	            20%,40%,60%,80%{transform:rotate(-3deg);}
+	            50%,70%{ transform:rotate(3deg);}
+                }
+              @keyframes aaaa
+                {
+	            0%,100%{transform:rotate(0);}
+	            10%,30%{transform:rotate(3deg);}
+	            20%,40%,60%,80%{transform:rotate(-3deg);}
+	            50%,70%{ transform:rotate(3deg);}
+                }
+             div.aaaa
+                {
+                position:relative;
+                -moz-animation: aaaa 5s linear infinite alternate;
+                -webkit-animation: aaaa 5s linear infinite alternate;
+                -o-animation: aaaa 5s linear infinite alternate;
+                animation: aaaa 5s linear infinite alternate;
+                }
+               
+
+    </style>
+</head>
+<body>
+    <section><div class="aaaaaaa">animate</div></section>
+    <section><div class="aaaa">animate</div></section>
+</body>
+</html>

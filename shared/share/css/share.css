@@ -1,0 +1,108 @@
+﻿    html, body {
+    font-family: 'Raleway', "Trebuchet MS", Arial, Helvetica, sans-serif;
+    }
+
+    .c100 {
+    font-size: 150px;
+    }
+
+    .c100 {
+    position: relative;
+    width: 1em;
+    height: 1em;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    margin: 0 auto;
+    background-color: #fff;
+    }
+
+    .c100 .slice {
+        clip: rect(auto, auto, auto, auto);
+    }
+
+    .c100 .bar, .c100 .fill {
+        position: absolute;
+        border: 0.08em solid #00ACE9;
+        width: 0.84em;
+        height: 0.84em;
+        clip: rect(0em, 0.5em, 1em, 0em);
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    .c100 .fill {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+
+    .c100 .bar {
+        -webkit-transform: rotate(270deg);
+        -moz-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+        transform: rotate(270deg);
+        -o-transform: rotate(270deg);
+    }
+
+    .c100:after {
+        position: absolute;
+        top: 0.08em;
+        left: 0.08em;
+        display: block;
+        content: " ";
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        background-color: whitesmoke;
+        width: 0.84em;
+        height: 0.84em;
+        -webkit-transition: all 0.2s ease-in;
+        -moz-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in;
+    }
+
+    .c100:hover:after {
+        top: 0.04em;
+        left: 0.04em;
+        width: 0.92em;
+        height: 0.92em;
+        background-color: #307bbb;
+    }
+
+    .c100 > span {
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        left: 0;
+        top: 3.2em;
+        line-height: 1.4em;
+        font-size: 16px;
+        color: #cccccc;
+        display: block;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+    }
+
+    .c100:hover > span {
+        color: #fff;
+    }

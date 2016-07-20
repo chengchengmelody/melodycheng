@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>transform</title>
+    <style>
+        * {margin: 0;padding: 0;font-family:'Helvetica neue', Helvetica, Arial, sans-serif;box-sizing: border-box;}
+        body{background:#f7f8f9!important;}
+        section {border: 1px solid #ccc;width: 200px;margin: 30px auto;}
+        div {width:200px;height:200px;text-align:center;margin:0 auto;padding-top:100px;background:#286AAB;color:#fff;}
+         div {
+             /*默认原点为元素中心*/
+            -ms-transform-origin:0 0; 		/* IE 9 */
+            -webkit-transform-origin:0 0;	/* Safari 和 Chrome */
+            -moz-transform-origin:0 0;		/* Firefox */
+            -o-transform-origin:0 0;		/* Opera */
+            transform-origin:0 0;
+            }
+        div.translate
+            {
+            -ms-transform:translate(300px,0px); /* IE 9 */
+            -moz-transform:translate(300px,0px); /* Firefox */
+            -webkit-transform:translate(300px,0px); /* Safari and Chrome */
+            -o-transform:translate(300px,0px); /* Opera */
+            transform:translate(300px,0px);
+            }
+        div.rotate
+            {
+            background:#b200ff;
+            -ms-transform: rotate(30deg);		/* IE 9 */
+            -webkit-transform: rotate(30deg);	/* Safari and Chrome */
+            -o-transform: rotate(30deg);		/* Opera */
+            -moz-transform: rotate(30deg);		/* Firefox */
+            transform: rotate(30deg);
+            }
+        div.scale
+            {
+            -ms-transform: scale(2,1);		/* IE 9 */
+            -webkit-transform: scale(2,1);	/* Safari and Chrome */
+            -o-transform: scale(2,1);		/* Opera */
+            -moz-transform: scale(2,1);		/* Firefox */
+            transform: scale(2,1);
+            }
+        div.skew
+            {
+            -ms-transform:skew(30deg,20deg); /* IE 9 */
+            -moz-transform:skew(30deg,20deg); /* Firefox */
+            -webkit-transform:skew(30deg,20deg); /* Safari and Chrome */
+            -o-transform:skew(30deg,20deg); /* Opera */
+            transform:skew(30deg,20deg);
+            }
+    </style>
+</head>
+<body>
+    <section><div class="translate">transform--translate</div></section>
+    <section><div class="rotate">transform--rotate</div></section>
+    <section><div class="scale">transform--scale</div></section>
+    <section><div class="skew">transform--skew</div></section>
+</body>
+</html>
